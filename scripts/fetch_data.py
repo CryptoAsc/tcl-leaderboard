@@ -72,9 +72,8 @@ def fetch_hub_leaderboard():
             'player_id': player_id
         })
 
-    # Sort players primarily by points descending. 
-    # Faceit usually does this, but it's good to be certain.
-    cleaned_players.sort(key=lambda x: x['points'], reverse=True)
+    # Sort players primarily by streak descending, then by points descending.
+    cleaned_players.sort(key=lambda x: (x['current_streak'], x['points']), reverse=True)
     
     # Re-assign positions based on sorted order just in case
     for i, p in enumerate(cleaned_players):

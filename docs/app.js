@@ -54,13 +54,13 @@ function renderLeaderboard(players) {
                 <img src="${avatarUrl}" alt="${player.nickname}" class="player-avatar" onerror="this.src='https://ui-avatars.com/api/?name=?&background=27272a&color=fff'">
                 <span>${player.nickname}</span>
             </div>
-            <div class="col-stats">${player.points}</div>
+            <div class="col-streak">
+                <span class="streak-badge">${player.current_streak} Win${player.current_streak !== 1 ? 's' : ''}</span>
+            </div>
+            <div class="col-stats">${player.points} pts</div>
             <div class="col-wl">
                 ${player.won}W / ${player.lost}L 
                 (<span style="color:${winRateColor}">${winRateStatus}%</span>)
-            </div>
-            <div class="col-streak">
-                <span class="streak-badge">${player.current_streak} Win${player.current_streak !== 1 ? 's' : ''}</span>
             </div>
         `;
 
