@@ -130,20 +130,18 @@ function playStreakAudio(streak) {
     if (streak < 2) return; // No sound for 0 or 1 streak
 
     const audioMap = {
-        2: "double_kill",
-        3: "triple_kill",
-        4: "ultra_kill",
-        5: "rampage"
+        2: "https://www.myinstants.com/media/sounds/doublekill.mp3",
+        3: "https://www.myinstants.com/media/sounds/triple_kill.mp3",
+        4: "https://www.myinstants.com/media/sounds/ultrakill.mp3",
+        5: "https://www.myinstants.com/media/sounds/rampage_1.mp3"
     };
 
     // Cap streak at 5 for sound purposes
     const capLevel = Math.min(streak, 5);
-    const soundName = audioMap[capLevel];
+    const audioUrl = audioMap[capLevel];
 
-    if (soundName) {
+    if (audioUrl) {
         // We use publicly available dota 2 sound resources 
-        const audioUrl = `https://raw.githubusercontent.com/skiller-suzu/Dota2-Soundboard/master/Announcer/${soundName}.mp3`;
-
         const audio = new Audio(audioUrl);
         audio.volume = 0.15; // Set volume very low (15%) to prevent ear damage
 
@@ -152,7 +150,7 @@ function playStreakAudio(streak) {
         if (playPromise !== undefined) {
             playPromise.then(_ => {
                 hasPlayedInitialAudio = true;
-                console.log(`Played ${soundName} effect for streak ${streak}`);
+                console.log(`Played effect for streak ${streak}`);
             }).catch(error => {
                 console.log("Audio autoplay was blocked by browser. User interaction needed first.");
                 // Add a "click anywhere to play sound" listener if blocked
