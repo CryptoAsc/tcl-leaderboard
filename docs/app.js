@@ -1,5 +1,7 @@
 // public/app.js
 
+let hasPlayedInitialAudio = false;
+
 document.addEventListener('DOMContentLoaded', () => {
     fetchLeaderboardData();
     // Auto refresh every 2 mins
@@ -13,7 +15,8 @@ async function fetchLeaderboardData() {
         const data = await response.json();
 
         renderLeaderboard(data);
-        updateEscapeTracker(data);
+        const maxActiveStreak = updateEscapeTracker(data);
+        playStreakAudio(maxActiveStreak);
 
         document.getElementById('last-updated').textContent = new Date().toLocaleTimeString();
     } catch (error) {
@@ -117,5 +120,49 @@ function updateEscapeTracker(players) {
                 </div>
             </div>
         `;
+    }
+
+    return maxStreak;
+}
+
+function playStreakAudio(streak) {
+    if (hasPlayedInitialAudio) return; // Only play once on page load to avoid spam during background refresh
+    if (streak < 2) return; // No sound for 0 or 1 streak
+
+    const audioMap = {
+        2: "double_kill",
+        3: "triple_kill",
+        4: "ultra_kill",
+        5: "rampage"
+    };
+
+    // Cap streak at 5 for sound purposes
+    const capLevel = Math.min(streak, 5);
+    const soundName = audioMap[capLevel];
+
+    if (soundName) {
+        // We use publicly available dota 2 sound resources 
+        const audioUrl = `https://raw.githubusercontent.com/skiller-suzu/Dota2-Soundboard/master/Announcer/${soundName}.mp3`;
+
+        const audio = new Audio(audioUrl);
+        audio.volume = 0.15; // Set volume very low (15%) to prevent ear damage
+
+        // Browsers block autoplay unless user interacts, so we attempt to play and catch exceptions silently
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+            playPromise.then(_ => {
+                hasPlayedInitialAudio = true;
+                console.log(`Played ${soundName} effect for streak ${streak}`);
+            }).catch(error => {
+                console.log("Audio autoplay was blocked by browser. User interaction needed first.");
+                // Add a "click anywhere to play sound" listener if blocked
+                document.body.addEventListener('click', () => {
+                    if (!hasPlayedInitialAudio) {
+                        audio.play();
+                        hasPlayedInitialAudio = true;
+                    }
+                }, { once: true });
+            });
+        }
     }
 }
