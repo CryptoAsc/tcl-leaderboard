@@ -30,8 +30,8 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           
-          for i in $(seq 1 18); do
-            echo "--- Poll $i/18 ---"
+          for i in $(seq 1 19); do
+            echo "--- Poll $i/19 ---"
             python scripts/fetch_data.py
             python scripts/discord_webhook.py
             
@@ -43,5 +43,5 @@ jobs:
               git push origin main
             fi
             
-            if [ $i -lt 18 ]; then sleep 30; fi
+            if [ $i -lt 19 ]; then sleep 30; fi
           done
