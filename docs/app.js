@@ -1,6 +1,4 @@
-// public/app.js
-
-let hasPlayedInitialAudio = false;
+let currentMaxStreak = -1;
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchLeaderboardData();
@@ -16,7 +14,19 @@ async function fetchLeaderboardData() {
 
         renderLeaderboard(data);
         const maxActiveStreak = updateEscapeTracker(data);
-        playStreakAudio(maxActiveStreak);
+
+        if (currentMaxStreak === -1) {
+            // First time loading data
+            currentMaxStreak = maxActiveStreak;
+            playStreakAudio(maxActiveStreak);
+        } else if (maxActiveStreak > currentMaxStreak) {
+            // Streak just increased, play announcement
+            currentMaxStreak = maxActiveStreak;
+            playStreakAudio(maxActiveStreak);
+        } else {
+            // Streak didn't increase or has reset, track without sound
+            currentMaxStreak = maxActiveStreak;
+        }
 
         document.getElementById('last-updated').textContent = new Date().toLocaleTimeString();
     } catch (error) {
@@ -90,7 +100,7 @@ function updateEscapeTracker(players) {
             <h2 class="tracker-title">Low Priority Escape Status</h2>
             <p style="color: var(--text-muted);">Awaiting the first victory...</p>
         `;
-        return;
+        return 0;
     }
 
     const winsNeeded = Math.max(0, 5 - maxStreak);
@@ -126,7 +136,6 @@ function updateEscapeTracker(players) {
 }
 
 function playStreakAudio(streak) {
-    if (hasPlayedInitialAudio) return; // Only play once on page load to avoid spam during background refresh
     if (streak < 2) return; // No sound for 0 or 1 streak
 
     const audioMap = {
@@ -149,17 +158,21 @@ function playStreakAudio(streak) {
         const playPromise = audio.play();
         if (playPromise !== undefined) {
             playPromise.then(_ => {
-                hasPlayedInitialAudio = true;
                 console.log(`Played effect for streak ${streak}`);
             }).catch(error => {
                 console.log("Audio autoplay was blocked by browser. User interaction needed first.");
                 // Add a "click anywhere to play sound" listener if blocked
-                document.body.addEventListener('click', () => {
-                    if (!hasPlayedInitialAudio) {
-                        audio.play();
-                        hasPlayedInitialAudio = true;
-                    }
-                }, { once: true });
+                if (!window.audioUnlockListenerAdded) {
+                    window.audioUnlockListenerAdded = true;
+                    document.body.addEventListener('click', () => {
+                        if (currentMaxStreak >= 2) {
+                            const latestUrl = audioMap[Math.min(currentMaxStreak, 5)];
+                            const unlockAudio = new Audio(latestUrl);
+                            unlockAudio.volume = 0.15;
+                            unlockAudio.play().catch(e => console.error("Audio blocked after click: ", e));
+                        }
+                    }, { once: true });
+                }
             });
         }
     }
