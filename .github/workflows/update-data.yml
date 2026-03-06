@@ -2,7 +2,7 @@ name: Update Leaderboard Data
 
 on:
   schedule:
-    - cron: '*/10 * * * *' # Runs every 10 minutes
+    - cron: '0 */6 * * *' # Runs every 6 hours (00:00, 06:00, 12:00, 18:00)
   workflow_dispatch:       # Allows manual triggering from the GitHub UI
 
 permissions:
@@ -30,8 +30,8 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           
-          for i in $(seq 1 19); do
-            echo "--- Poll $i/19 ---"
+          for i in $(seq 1 600); do
+            echo "--- Poll $i/600 ---"
             python scripts/fetch_data.py
             python scripts/discord_webhook.py
             
@@ -39,9 +39,15 @@ jobs:
             if ! git diff --quiet || ! git diff --staged --quiet; then
               echo "Changes detected, committing and pushing..."
               git commit -m "Auto-update leaderboard data"
-              git pull --rebase origin main
+              if ! git pull --rebase origin main; then
+                echo "Git rebase conflict detected. Resetting to remote main..."
+                git rebase --abort
+                git reset --hard origin/main
+                # We skip push this time. The next loop will fetch fresh data.
+                continue
+              fi
               git push origin main
             fi
             
-            if [ $i -lt 19 ]; then sleep 30; fi
+            if [ $i -lt 600 ]; then sleep 30; fi
           done
