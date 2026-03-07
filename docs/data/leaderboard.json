@@ -3,11 +3,11 @@
     "position": 1,
     "nickname": "Darkes_x",
     "avatar": "https://distribution.faceit-cdn.net/images/5046fb9c-b4a2-456a-af95-f04aef9f2a5d.jpg",
-    "points": 1044,
-    "win_rate": 0.83,
-    "current_streak": 9,
-    "played": 12,
-    "won": 10,
+    "points": 1049,
+    "win_rate": 0.85,
+    "current_streak": 10,
+    "played": 13,
+    "won": 11,
     "lost": 2,
     "player_id": "7fc64744-07a4-418c-b677-0c9ee5c68056"
   },
@@ -37,15 +37,15 @@
   },
   {
     "position": 4,
-    "nickname": "Davidvanclef",
-    "avatar": "https://distribution.faceit-cdn.net/images/ddd8ab08-2c0d-47f8-8256-46bfc4594ef1.jpeg",
-    "points": 1010,
-    "win_rate": 0.5,
+    "nickname": "Quintessa1",
+    "avatar": "",
+    "points": 1015,
+    "win_rate": 1,
     "current_streak": 3,
-    "played": 10,
-    "won": 5,
-    "lost": 5,
-    "player_id": "fc31f42a-0194-4f9a-9f4c-90792d0698a8"
+    "played": 3,
+    "won": 3,
+    "lost": 0,
+    "player_id": "782c965a-f602-4c1a-84c4-e6d8d566f51b"
   },
   {
     "position": 5,
@@ -73,18 +73,6 @@
   },
   {
     "position": 7,
-    "nickname": "Quintessa1",
-    "avatar": "",
-    "points": 1010,
-    "win_rate": 1,
-    "current_streak": 2,
-    "played": 2,
-    "won": 2,
-    "lost": 0,
-    "player_id": "782c965a-f602-4c1a-84c4-e6d8d566f51b"
-  },
-  {
-    "position": 8,
     "nickname": "_t0rben",
     "avatar": "https://distribution.faceit-cdn.net/images/cba7bb77-097a-45a6-8ed4-8b47f11e8edf.jpeg",
     "points": 1007,
@@ -96,7 +84,7 @@
     "player_id": "663e40c6-9874-47b8-bd1c-c7aa366c2184"
   },
   {
-    "position": 9,
+    "position": 8,
     "nickname": "Memeshell",
     "avatar": "https://distribution.faceit-cdn.net/images/fcaf1fdc-beae-4e1e-8651-af0f0883b4e2.jpeg",
     "points": 1007,
@@ -106,6 +94,18 @@
     "won": 2,
     "lost": 1,
     "player_id": "4cb568d8-7a8d-4647-b4bc-8a51a6da5fa6"
+  },
+  {
+    "position": 9,
+    "nickname": "leobyby",
+    "avatar": "",
+    "points": 1029,
+    "win_rate": 0.78,
+    "current_streak": 1,
+    "played": 9,
+    "won": 7,
+    "lost": 2,
+    "player_id": "14c348d5-ca4c-4826-ab80-c27d085eddbe"
   },
   {
     "position": 10,
@@ -121,6 +121,18 @@
   },
   {
     "position": 11,
+    "nickname": "Defy-Gravity",
+    "avatar": "https://distribution.faceit-cdn.net/images/9a234925-05b4-4a0d-870b-d68d1eca4fe6.jpg",
+    "points": 1009,
+    "win_rate": 0.6,
+    "current_streak": 1,
+    "played": 5,
+    "won": 3,
+    "lost": 2,
+    "player_id": "9a2537d2-a2c3-4fb6-883a-232cece9e51d"
+  },
+  {
+    "position": 12,
     "nickname": "mio43",
     "avatar": "",
     "points": 1005,
@@ -132,7 +144,7 @@
     "player_id": "5987e63a-56b1-4a42-b643-3b459aaab952"
   },
   {
-    "position": 12,
+    "position": 13,
     "nickname": "Arthar",
     "avatar": "https://assets.faceit-cdn.net/avatars/9e277dad-de07-45ab-bc1a-3c568749f4fd_1550699769461.png",
     "points": 1005,
@@ -142,18 +154,6 @@
     "won": 1,
     "lost": 0,
     "player_id": "9e277dad-de07-45ab-bc1a-3c568749f4fd"
-  },
-  {
-    "position": 13,
-    "nickname": "Arandros",
-    "avatar": "",
-    "points": 1005,
-    "win_rate": 1,
-    "current_streak": 1,
-    "played": 1,
-    "won": 1,
-    "lost": 0,
-    "player_id": "a494a6a0-cea7-4cac-8052-34d8ca5a0848"
   },
   {
     "position": 14,
@@ -193,6 +193,18 @@
   },
   {
     "position": 17,
+    "nickname": "Monkey_d_fu",
+    "avatar": "",
+    "points": 999,
+    "win_rate": 0.33,
+    "current_streak": 1,
+    "played": 3,
+    "won": 1,
+    "lost": 2,
+    "player_id": "bf2abb13-e634-4545-bd36-23263a67b539"
+  },
+  {
+    "position": 18,
     "nickname": "JesusAkaMoha",
     "avatar": "https://distribution.faceit-cdn.net/images/956f49ab-8949-4679-89ad-9fd0b4e9abc8.jpeg",
     "points": 999,
@@ -204,7 +216,7 @@
     "player_id": "44715f16-82d3-4c3d-a8fa-4e77297b13ea"
   },
   {
-    "position": 18,
+    "position": 19,
     "nickname": "YngDmN-",
     "avatar": "https://distribution.faceit-cdn.net/images/64d5be1b-e904-4275-b823-ecfd9cafd444.jpeg",
     "points": 998,
@@ -216,7 +228,7 @@
     "player_id": "79d95db7-304b-4397-9496-a8d84b61ab58"
   },
   {
-    "position": 19,
+    "position": 20,
     "nickname": "KKFreundesel",
     "avatar": "",
     "points": 996,
@@ -226,18 +238,6 @@
     "won": 1,
     "lost": 3,
     "player_id": "3d8ee27a-24b7-4895-a478-90235472ead1"
-  },
-  {
-    "position": 20,
-    "nickname": "leobyby",
-    "avatar": "",
-    "points": 1024,
-    "win_rate": 0.75,
-    "current_streak": 0,
-    "played": 8,
-    "won": 6,
-    "lost": 2,
-    "player_id": "14c348d5-ca4c-4826-ab80-c27d085eddbe"
   },
   {
     "position": 21,
@@ -265,6 +265,18 @@
   },
   {
     "position": 23,
+    "nickname": "Davidvanclef",
+    "avatar": "https://distribution.faceit-cdn.net/images/ddd8ab08-2c0d-47f8-8256-46bfc4594ef1.jpeg",
+    "points": 1007,
+    "win_rate": 0.45,
+    "current_streak": 0,
+    "played": 11,
+    "won": 5,
+    "lost": 6,
+    "player_id": "fc31f42a-0194-4f9a-9f4c-90792d0698a8"
+  },
+  {
+    "position": 24,
     "nickname": "Duckglue",
     "avatar": "https://distribution.faceit-cdn.net/images/bed81899-8553-44cd-b071-b101fdd49794.jpg",
     "points": 1007,
@@ -276,7 +288,7 @@
     "player_id": "24e40e84-0e1b-4d8d-b163-90030f704fab"
   },
   {
-    "position": 24,
+    "position": 25,
     "nickname": "RealPumbaa",
     "avatar": "https://distribution.faceit-cdn.net/images/fed3a390-876d-4ba8-a813-e9649157c756.jpeg",
     "points": 1004,
@@ -286,18 +298,6 @@
     "won": 2,
     "lost": 2,
     "player_id": "0a61ad8a-ea90-4992-aaf8-836148fd0198"
-  },
-  {
-    "position": 25,
-    "nickname": "Defy-Gravity",
-    "avatar": "https://distribution.faceit-cdn.net/images/9a234925-05b4-4a0d-870b-d68d1eca4fe6.jpg",
-    "points": 1004,
-    "win_rate": 0.5,
-    "current_streak": 0,
-    "played": 4,
-    "won": 2,
-    "lost": 2,
-    "player_id": "9a2537d2-a2c3-4fb6-883a-232cece9e51d"
   },
   {
     "position": 26,
@@ -325,6 +325,18 @@
   },
   {
     "position": 28,
+    "nickname": "Arandros",
+    "avatar": "",
+    "points": 1002,
+    "win_rate": 0.5,
+    "current_streak": 0,
+    "played": 2,
+    "won": 1,
+    "lost": 1,
+    "player_id": "a494a6a0-cea7-4cac-8052-34d8ca5a0848"
+  },
+  {
+    "position": 29,
     "nickname": "GDBDTV",
     "avatar": "",
     "points": 1001,
@@ -334,18 +346,6 @@
     "won": 2,
     "lost": 3,
     "player_id": "cef8a94a-54c8-4e05-a0ce-3ba7dd78d3f7"
-  },
-  {
-    "position": 29,
-    "nickname": "derjurist",
-    "avatar": "",
-    "points": 999,
-    "win_rate": 0.36,
-    "current_streak": 0,
-    "played": 11,
-    "won": 4,
-    "lost": 7,
-    "player_id": "4014fec6-d0ef-43ef-af1b-916832c22ca1"
   },
   {
     "position": 30,
@@ -481,18 +481,42 @@
   },
   {
     "position": 41,
-    "nickname": "Monkey_d_fu",
+    "nickname": "mowolle",
     "avatar": "",
-    "points": 994,
+    "points": 997,
     "win_rate": 0,
     "current_streak": 0,
-    "played": 2,
+    "played": 1,
     "won": 0,
-    "lost": 2,
-    "player_id": "bf2abb13-e634-4545-bd36-23263a67b539"
+    "lost": 1,
+    "player_id": "93d9bd0f-b789-4b6c-8c14-23119b7c4d97"
   },
   {
     "position": 42,
+    "nickname": "foxXx_gaming",
+    "avatar": "",
+    "points": 997,
+    "win_rate": 0,
+    "current_streak": 0,
+    "played": 1,
+    "won": 0,
+    "lost": 1,
+    "player_id": "14dd915c-96d5-405f-9d6c-855cd7c45272"
+  },
+  {
+    "position": 43,
+    "nickname": "derjurist",
+    "avatar": "",
+    "points": 996,
+    "win_rate": 0.33,
+    "current_streak": 0,
+    "played": 12,
+    "won": 4,
+    "lost": 8,
+    "player_id": "4014fec6-d0ef-43ef-af1b-916832c22ca1"
+  },
+  {
+    "position": 44,
     "nickname": "gwittycle-",
     "avatar": "https://distribution.faceit-cdn.net/images/47c98909-7044-4e92-9bdf-ac160aa9edfd.jpeg",
     "points": 994,
@@ -504,7 +528,7 @@
     "player_id": "e8194499-a9b3-46db-af16-1d37ff41ef16"
   },
   {
-    "position": 43,
+    "position": 45,
     "nickname": "Holtmann1",
     "avatar": "",
     "points": 994,
@@ -516,7 +540,7 @@
     "player_id": "27835ff1-132b-4eb5-999b-d13a355e836d"
   },
   {
-    "position": 44,
+    "position": 46,
     "nickname": "ravenpeter",
     "avatar": "https://distribution.faceit-cdn.net/images/0614dc2c-82bf-4bcd-adc5-68e21ed11afd.jpeg",
     "points": 991,
@@ -528,7 +552,7 @@
     "player_id": "fc20d221-a76f-4949-9b8e-f7fb7cd9d78e"
   },
   {
-    "position": 45,
+    "position": 47,
     "nickname": "eAsTeT",
     "avatar": "",
     "points": 991,
